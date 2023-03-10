@@ -1,0 +1,38 @@
+.join-section {
+  .join {
+    background: $darkpurple;
+    border-radius: 10px;
+    margin-top: 129px;
+    margin-bottom: 131px;
+    text-align: center;
+    .join-title {
+      text-align: center;
+      justify-content: center;
+      padding-top: 80px;
+      padding-bottom: 47px;
+
+      @include text($ff, 36px, 42px, 700, $white);
+    }
+    .join-input {
+      background: #f9f1fe;
+      display: inline-block;
+      margin-bottom: 80px;
+      border-radius: 50px;
+      a {
+        background: $primary;
+        padding: 10px 24px;
+        border-radius: 22px;
+        @include text($ff, 20px, 23px, 600, $white);
+      }
+      input {
+        width: 700px;
+        border-radius: 50px;
+        background: #f9f1fe;
+        display: inline-block;
+        padding: 18px 395px 23px 31px;
+        border: 0;
+        outline: none;
+      }
+    }
+  }
+}

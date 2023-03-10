@@ -1,1 +1,81 @@
+.doctor-section {
+  .title {
+    text-align: center;
+    margin-bottom: 70px;
+  }
+  .desc {
+    margin-inline: auto;
+    text-align: center;
+    margin-bottom: 123px;
+    max-width: 837px;
+  }
+  .doctor {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 28px;
 
+    @include desktop-small {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+    .doctor-card {
+      display: block;
+      min-height: 370px;
+      background: $terciary;
+      border-radius: 20px;
+      padding-left: 44px;
+      transition: $transition;
+      &__header {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 4.5;
+        padding-top: 22px;
+        .icon {
+          max-width: 100%;
+        }
+        .header-bio {
+          &__name {
+            @include text($ff, 20px, 23px, 600, $paragraph);
+            padding-bottom: 3px;
+          }
+          &__prof {
+            @include text($ff, 16px, 19px, 400, $text);
+            padding-bottom: 35px;
+          }
+        }
+      }
+      &__desc {
+        @include text($ff, 16px, 19px, 400, $text);
+        max-width: 293px;
+        padding-bottom: 28px;
+      }
+
+      &__btn {
+        display: block;
+        box-sizing: border-box;
+        max-width: 282px;
+        background: #8842f0;
+        border-radius: 50px;
+        padding: 11px 49px;
+        text-align: center;
+        @include text($ff, 20px, 23px, 600, $terciary);
+      }
+      &:hover {
+        background: $primary;
+        scale: 1.1;
+        .header-bio__name,
+        .header-bio__prof,
+        .doctor-card__desc {
+          color: $white;
+        }
+        .doctor-card__btn {
+          background: $terciary;
+          color: $text;
+        }
+      }
+    }
+  }
+}
