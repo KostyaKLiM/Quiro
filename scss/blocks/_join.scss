@@ -1,11 +1,11 @@
 .join-section {
-  .join {
     background: $darkpurple;
     border-radius: 10px;
     margin-top: 129px;
     margin-bottom: 131px;
     text-align: center;
-    .join-title {
+    padding-bottom: 80px;
+    .join-section__title {
       text-align: center;
       justify-content: center;
       padding-top: 80px;
@@ -13,26 +13,52 @@
 
       @include text($ff, 36px, 42px, 700, $white);
     }
-    .join-input {
+    .join-section__form {
+      max-width: 717px;
+      margin-inline: auto;
       background: #f9f1fe;
-      display: inline-block;
-      margin-bottom: 80px;
+      display: flex;
+     align-items: center;
+     justify-content: space-between;
       border-radius: 50px;
-      a {
+      padding-right: 15px;
+      .join-section__a {
         background: $primary;
         padding: 10px 24px;
         border-radius: 22px;
         @include text($ff, 20px, 23px, 600, $white);
+        transition: $transition;
       }
-      input {
-        width: 700px;
+      .join-section__a:hover{
+        background: #311443;
+        scale: 1.05;
+      }
+      .join-section__form input {
+        width: 550px;
         border-radius: 50px;
         background: #f9f1fe;
-        display: inline-block;
-        padding: 18px 395px 23px 31px;
+        padding: 18px 30px 23px 31px;
         border: 0;
         outline: none;
       }
+      @include tablet {
+        flex-direction: column;
+        .join-section__form{
+          padding: 0;
+        }
+        .join-section__form input{
+        &::placeholder{
+          text-align: center;
+        }
+      }
+        .join-section__a{
+          margin-bottom: 5px;
+        }
+      }
+        @include tablet-small {
+          .join-section__form input{
+            width: 280px;
+          }
+      }
     }
   }
-}

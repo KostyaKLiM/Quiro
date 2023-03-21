@@ -1,11 +1,15 @@
 .header {
   padding: 50px 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
   &__logo {
     @include text($ff, 24px, 28px, 600, $paragraph);
+    @include tablet{
+      @include text($ff, 18px, 22px, 600, $paragraph);
+  }
   }
   &__search {
     position: relative;
@@ -30,6 +34,12 @@
     }
   }
 }
+.nav__ul .material-icons {
+  display: none;
+}
+.header__burger{
+  display: none;
+}
 .nav {
   &__ul {
     display: flex;
@@ -37,7 +47,10 @@
     gap: 24px;
   }
   &__a {
-	 @include text($ff, 16px, 16px, 400, $black);
+	 @include text($ff, 16px, 18px, 400, $black);
+   @include tablet{
+    @include text($ff, 12px, 14px, 400, $black);
+}
     position: relative;
     transition: $transition;
     &::before {
@@ -62,5 +75,45 @@
         width: calc(100% - 10px);
       }
     }
+  }
+}
+@media (max-width:768px ){
+  .header__search{
+margin-inline: auto;  
+}
+  .nav__ul{position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background: $terciary;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    transition: $transition;
+    transform: translateX(120%);
+  }
+  .nav__ul._active{
+    transform: translateX(0);
+  }
+  .nav__ul .material-icons {
+    display: inline-block;
+    position: fixed;
+    top: 25px;
+    right: 30px;
+    color: $black;
+  }
+  .header__burger{
+    z-index: 4;
+    position: fixed;
+    display: inline-block;
+    top: 25px;
+    right: 30px;
+  }
+  .nav__a{
+    @include text($ff, 18px, 24px, 600, $black);
   }
 }

@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="css/owl.carousel.css">
 	<link rel="stylesheet" href="css/owl.theme.default.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
@@ -21,14 +22,18 @@
 		<header class="header">
 			<a href="#" class="header__logo">Quiro Diagnostic Center</a>
 			<nav class="nav">
-				<ul class="nav__ul">
+				<ul class="nav__ul" id="navUL">
 					<li class="nav__li"><a href="#" class="nav__a _active">Home</a></li>
 					<li class="nav__li"><a href="#" class="nav__a">Service</a></li>
 					<li class="nav__li"><a href="#" class="nav__a">Doctors</a></li>
 					<li class="nav__li"><a href="#" class="nav__a">Gallery</a></li>
 					<li class="nav__li"><a href="#" class="nav__a">Contact</a></li>
+					<span class="material-icons" onclick="navToggle()">close</span>
 				</ul>
 			</nav>
+			<div class="header__burger">
+				<span class="material-icons" onclick="navToggle()">menu</span>
+			</div>
 			<div class="header__search">
 				<input type="search" placeholder="Search Here">
 				<img src="img/icons/search.svg" alt="Search Icon">
@@ -192,31 +197,61 @@
 
 		<div class="join-section">
 
-			<div class="join">
-				<div class="join-title">Join Our Newsletter</div>
-				<div class="join-input"><input type="email" placeholder="Enter your email"><a href="#">Subscribe</a></div>
+			<div class="join-section__title">Join Our Newsletter</div>
+			<div class="join-section__form">
+				<div class="join-section__form input"><input type="email" placeholder="Enter your email"></div>
+				<a href="#" class="join-section__a">Subscribe</a>
 			</div>
 
 		</div>
 
-
-		<footer class="footer"></footer>
-
 	</div>
+	<footer class="footer">
+		<div class="footer-inner">
+			<div class="footer-row">
+				<div class="fotter-col">
+					<h3>Quiro Diagnostic Center</h3>
+					<div class="footer-col__disc">Magnis facilisis tortor volutpat lobortis ac id. Libero enim nunc etiam
+						consectetur lacus. In malesuada dictum turpis amet porttitor viverra laoreet at commodo. Pellentesque
+						vitae id semper nec sollicitudin. Quis purus, mus consectetur pharetra ipsum facilisis amet cras
+						purus.</div>
+				</div>
+
+				<div class="fotter-col">
+					<h4>Address</h4>
+					<div class="footer-col__address">5 Koh Sek Lim Rd Singapore 486050</div>
+					<h4>Telephone</h4>
+					<div class="footer-col__tel">(07)40127246 (02)67566577</div>
+					<h4>Email</h4>
+					<div class="footer-col__email">name@email.com</div>
+				</div>
+
+				<div class="fotter-col">
+					<h4>Opening Hour</h4>
+					<ul class="footer-col__ul">
+						<li class="footer-col__li">Thursday: 9am - 6pm</li>
+						<li class="footer-col__li">Wednesday: 9am - 6pm</li>
+						<li class="footer-col__li">Saturday: 9am - 6pm</li>
+						<li class="footer-col__li">Friday: 9am - 6pm</li>
+						<li class="footer-col__li">Saturday: 9am - 6pm</li>
+						<li class="footer-col__li">Tuesday: 9am - 6pm</li>
+					</ul>
+
+				</div>
+
+			</div>
+		</div>
+
+
+		</div>
+	</footer>
 </body>
 
-<div class="join-section"></div>
-
-
-<footer class="footer"></footer>
-
-</div>
 
 
 
 
-
-
+<script src="js/script.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 	integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
 <script src="js/owl.carousel.min.js"></script>
